@@ -65,13 +65,14 @@ class _SignInScreenState extends State<SignInScreen> {
     if (response.statusCode == 200) {
       print(response.toString());
       final jsonBody = json.decode(response.body);
+      print(".....8888888888....${jsonBody}");
       loginModal user = loginModal.fromJson(jsonDecode(response.body));
       print(jsonBody.toString());
       if (user.success == "true") {
         setState(() {
           flag = false;
         });
-        _showLongToast(user.message);
+        _showLongToast(user.message??"");
 
         Navigator.push(
           context,
@@ -81,7 +82,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   )),
         );
       } else {
-        _showLongToast(user.message);
+        _showLongToast(user.message??"");
         setState(() {
           flag = false;
         });

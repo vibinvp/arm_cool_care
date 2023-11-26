@@ -1,4 +1,6 @@
 import 'dart:io';
+import 'package:arm_cool_care/Auth/signin.dart';
+import 'package:arm_cool_care/Auth/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart'; // Add this import
 import 'package:arm_cool_care/General/AnimatedSplashScreen.dart';
@@ -56,21 +58,21 @@ class _MyAppState extends State<MyApp> {
       ),
       locale: _locale,
       supportedLocales: const [Locale('en', 'US'), Locale('hi', 'IN')],
-      // localizationsDelegates: const [
-      //   DemoLocalization.delegate,
-      //   GlobalMaterialLocalizations.delegate,
-      //   GlobalWidgetsLocalizations.delegate,
-      //   GlobalCupertinoLocalizations.delegate,
-      // ],
-      // localeResolutionCallback: (deviceLocale, supportedLocales) {
-      //   for (var supportedLocale in supportedLocales) {
-      //     if (supportedLocale.languageCode == deviceLocale!.languageCode &&
-      //         supportedLocale.countryCode == deviceLocale.countryCode) {
-      //       return deviceLocale;
-      //     }
-      //   }
-      //   return supportedLocales.first;
-      // },
+      localizationsDelegates: const [
+        DemoLocalization.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      localeResolutionCallback: (deviceLocale, supportedLocales) {
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == deviceLocale!.languageCode &&
+              supportedLocale.countryCode == deviceLocale.countryCode) {
+            return deviceLocale;
+          }
+        }
+        return supportedLocales.first;
+      },
       home: AnimatedSplashScreen(),
     );
   }

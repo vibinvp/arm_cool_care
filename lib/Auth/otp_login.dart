@@ -75,23 +75,23 @@ class _OTPLogINScreenState extends State<OTPLogINScreen> {
         setState(() {
           flag = false;
         });
-        _showLongToast(user.message);
-        pref.setString("email", user.email);
-        pref.setString("name", user.name);
-        pref.setString("city", user.city);
-        pref.setString("address", user.address);
-        pref.setString("sex", user.sex);
-        pref.setString("mobile", user.username);
-        pref.setString("pin", user.pincode);
-        pref.setString("user_id", user.user_id);
-        pref.setString("pp", user.pp);
+        _showLongToast(user.message??"vibin");
+        // pref.setString("email", user.email??"vibin");
+        // pref.setString("name", user.name??"vibin");
+        // pref.setString("city", user.city??"vibin");
+        // pref.setString("address", user.address??"vibin");
+        // pref.setString("sex", user.sex??"vibin");
+        // pref.setString("mobile", user.username??"vibin");
+        // pref.setString("pin", user.pincode??"vibin");
+        // pref.setString("user_id", user.user_id??"vibin");
+        // pref.setString("pp", user.pp??"vibin");
         pref.setBool("isLogin", true);
-        print(user.user_id);
-        Constant.isLogin = true;
-        Constant.email = user.email;
-        Constant.name = user.name;
-        Constant.user_id = user.user_id;
-        Constant.image = user.pp;
+        // print(user.user_id);
+        // Constant.isLogin = true;
+        // Constant.email = user.email??"";
+        // Constant.name = user.name??"";
+        // Constant.user_id = user.user_id??"";
+        // Constant.image = user.pp??"";
         // pref.setString("pp", user.username);
 
 //        pref.setString("mobile",phoneController.text);
@@ -101,7 +101,7 @@ class _OTPLogINScreenState extends State<OTPLogINScreen> {
           MaterialPageRoute(builder: (context) => MyApp1()),
         );
       } else {
-        _showLongToast(user.message);
+        _showLongToast(user.message??"");
         setState(() {
           flag = false;
         });

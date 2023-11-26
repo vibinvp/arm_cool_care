@@ -105,6 +105,7 @@ flutter:
     - assets/font/
     - assets/gifs/
     - assets/videos/
+    - lib/lang/en.json
     
 
   # An image asset can refer to one or more resolution-specific "variants", see

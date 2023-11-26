@@ -576,99 +576,86 @@ class MyApp1State extends State<MyApp1> {
       ),*/
         ),
 
-//         bottomNavigationBar: BottomNavigationBar(
-//           items: [
-//             BottomNavigationBarItem(
-//               icon:
+        bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+              icon:
 
-//                   /* Image.asset("assets/images/home.png",
-//                   color: _selectedIndex == 0 ? AppColors.tela : AppColors.homeiconcolor,
-//                   height: 28,width: 28,fit:BoxFit.fill), */
+                  /* Image.asset("assets/images/home.png",
+                  color: _selectedIndex == 0 ? AppColors.tela : AppColors.homeiconcolor,
+                  height: 28,width: 28,fit:BoxFit.fill), */
 
-//                   Icon(
-//                 Icons.home_outlined,
-//                 color: _selectedIndex == 0
-//                     ? AppColors.homeiconcolor
-//                     : AppColors.black,
-//                 size: 25,
-//               ),
-//               label: Text(
-//                 'home',
-//                 style: TextStyle(fontSize: 12),
-//               ),
-//             ),
-//             BottomNavigationBarItem(
-//               icon: Icon(
-//                 Icons.category_rounded,
-//                 color: _selectedIndex == 1
-//                     ? AppColors.homeiconcolor
-//                     : AppColors.black,
-//                 size: 25,
-//               ),
-//               label: Text('cat',
-//                   style: const TextStyle(fontSize: 12)),
-//             ),
-//             // BottomNavigationBarItem(
-//             //   icon: Icon(
-//             //     Icons.add,
-//             //     color: _selectedIndex == 2 ? AppColors.homeiconcolor : AppColors.tela,
-//             //     size: 25,
-//             //   ),
-//             //   title: Text('Upload List', style: TextStyle(fontSize: 12)),
-//             // ),
-//             BottomNavigationBarItem(
-//               icon: Icon(
-//                 Icons.shopping_cart_sharp,
-//                 color: _selectedIndex == 2
-//                     ? AppColors.homeiconcolor
-//                     : AppColors.black,
-//                 size: 25,
-//               ),
-//               label: Text(' ${getTranslated(context, 'mcart')}',
-//                   style: const TextStyle(fontSize: 12)),
-//             ),
-//             BottomNavigationBarItem(
-//               icon:
-
-//                   /* Image.asset("assets/images/home.png",
-//                   color: _selectedIndex == 0 ? AppColors.tela : AppColors.homeiconcolor,
-//                   height: 28,width: 28,fit:BoxFit.fill), */
-
-//                   Icon(
-//                 Icons.design_services_sharp,
-//                 color: _selectedIndex == 3
-//                     ? AppColors.homeiconcolor
-//                     : AppColors.black,
-//                 size: 25,
-//               ),
-//               label: const Text(
-//                 'Spare Parts',
-//                 style: TextStyle(fontSize: 12),
-//               ),
-//             ),
-//             BottomNavigationBarItem(
-//               icon: Icon(
-//                 Icons.perm_identity,
-//                 color: _selectedIndex == 4
-//                     ? AppColors.homeiconcolor
-//                     : AppColors.black,
-//                 size: 25,
-//               ),
-//               label: Text('${getTranslated(context, 'ac')}',
-//                   style: const TextStyle(fontSize: 12)),
-//             ),
-//           ],
-//           currentIndex: _selectedIndex,
-//           selectedItemColor: AppColors.onselectedBottomicon,
-//           backgroundColor: AppColors.tela,
-//           type: BottomNavigationBarType.fixed,
-//           onTap: (int index) {
-// //          debugPrint("Current Index is $index");
-//             setState(() {
-//               _showPage = _PageChooser(index);
-//             });
-//           },
-//         ),
+                  Icon(
+                Icons.home_outlined,
+                color: _selectedIndex == 0
+                    ? AppColors.homeiconcolor
+                    : AppColors.black,
+                size: 25,
+              ),
+              label: "home"
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.category_rounded,
+                color: _selectedIndex == 1
+                    ? AppColors.homeiconcolor
+                    : AppColors.black,
+                size: 25,
+              ),
+              label:"cat",
+            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(
+            //     Icons.add,
+            //     color: _selectedIndex == 2 ? AppColors.homeiconcolor : AppColors.tela,
+            //     size: 25,
+            //   ),
+            //   title: Text('Upload List', style: TextStyle(fontSize: 12)),
+            // ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shopping_cart_sharp,
+                color: _selectedIndex == 2
+                    ? AppColors.homeiconcolor
+                    : AppColors.black,
+                size: 25,
+              ),
+              label: ' ${getTranslated(context, 'mcart')}',
+              
+            ),
+            BottomNavigationBarItem(
+              icon:
+                  Icon(
+                Icons.design_services_sharp,
+                color: _selectedIndex == 3
+                    ? AppColors.homeiconcolor
+                    : AppColors.black,
+                size: 25,
+              ),
+              label:   'Spare Parts'
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.perm_identity,
+                color: _selectedIndex == 4
+                    ? AppColors.homeiconcolor
+                    : AppColors.black,
+                size: 25,
+              ),
+              label: '${getTranslated(context, 'ac')}',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: AppColors.onselectedBottomicon,
+          backgroundColor: AppColors.tela,
+          type: BottomNavigationBarType.fixed,
+          onTap: (int index) {
+//          debugPrint("Current Index is $index");
+            setState(() {
+              _showPage = _PageChooser(index);
+            });
+          },
+        ),
 
         body: Container(
             color: AppColors.tela,
